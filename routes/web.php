@@ -25,8 +25,11 @@ Route::get('/services', function () {
     return view('user.services');
 });
 
-Route::get('/contact', function () {
-    return view('user.contact');
+
+
+Route::group(['namespace'=>'User'], function() {
+	Route::get('/contact', 'ContactController@index');
+	Route::post('/contact', 'ContactController@store');
 });
 
 Auth::routes();
