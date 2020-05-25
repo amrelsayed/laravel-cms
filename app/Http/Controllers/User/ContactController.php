@@ -22,7 +22,7 @@ class ContactController extends Controller
             'message' => 'required|max:1000',
         ]);
 
-        Message::insert([
+        Message::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,

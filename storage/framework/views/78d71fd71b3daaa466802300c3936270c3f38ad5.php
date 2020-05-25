@@ -76,11 +76,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item ">
+            <a href="/admin/messages" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+              Messages
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a href="/admin/users" class="nav-link">
-              <i class="nav-icon fas fa-users  "></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
               Users
-                
               </p>
             </a>
           </li>

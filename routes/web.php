@@ -33,10 +33,11 @@ Route::group(['namespace'=>'User'], function() {
 });
 
 Auth::routes();
-Route::group(['prefix'=>'admin','namespace'=>'admin'] ,function(){
+Route::group(['prefix'=>'admin','namespace'=>'admin', 'middleware' => 'auth'] ,function(){
     Route::get('/', 'adminController@index');
     Route::resource('/users', 'userController');
-
+    Route::get('/messages', 'MessagesController@index');
+    Route::delete('/messages/{id}', 'MessagesController@destroy');
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');
