@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
           <li class="nav-item ">
-            <a href="/admin" class="nav-link ">
+            <a href="/admin" class="nav-link {{ request()->segment(2) == '' ? 'active' : ''}}">
               <i class="nav-icon fas fa-tachometer-alt  "></i>
               <p>
                 Dashboard
@@ -75,8 +75,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a href="/admin/messages" class="nav-link">
+
+          <li class="nav-item">
+            <a href="/admin/messages" class="nav-link {{ request()->segment(2) == 'messages' ? 'active' : ''}}">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
               Messages
@@ -84,7 +85,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item ">
-            <a href="/admin/users" class="nav-link">
+            <a href="/admin/users" class="nav-link {{ request()->segment(2) == 'users' ? 'active' : ''}}">
               <i class="nav-icon fas fa-users"></i>
               <p>
               Users
